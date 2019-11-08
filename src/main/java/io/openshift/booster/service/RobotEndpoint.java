@@ -35,7 +35,7 @@ public class RobotEndpoint {
     // value is defined in application.properties.
     // Set it to your specific API
     @GET
-    public String ping() {
+    public Object ping() {
 
         System.out.println("Ping method invoked");
         String response= "Ping method invoked";
