@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-
+//This class provides a RESTful API with a /run method that can be triggered 
+//through the main app webpage. It is based on Quarkus run time. You don't need an Application to run it 
+//just time mvn compile quarkus:dev
 
 @Path("/my_robot")
 public class RobotEndpoint {
@@ -29,6 +31,10 @@ public class RobotEndpoint {
 
     // This method checks if the HubController can be reached
     @GET
+    // This contains the uri of the Robot APi that this application is invoking. The
+    // value is defined in application.properties.
+    // Set it to your specific API
+    @Value("${hub.controller.uri}")
     public Object ping() {
 
         System.out.println("Ping method invoked");
@@ -45,7 +51,7 @@ public class RobotEndpoint {
 
         System.out.println("Run method invoked");
 
-        String response = "";
+        String response = "Run method invoked";
 
         // Example GET invokation of the Robot API
         // response = restTemplate.getForObject(hubControllerEndpoint +
