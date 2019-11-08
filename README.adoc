@@ -51,7 +51,7 @@ To deploy your booster to a running OpenShift cluster:
 Build the ube jar 
 $ mvn clean package -DuberJar
 
-It produces an executable jar file in the target/ director, starter-app-java-quarkus-1.0-SNAPSHOT-runner.jar, an executable jar that can be run with java -jar
+It produces an executable jar file in the target/ directory, starter-app-java-quarkus-1.0-SNAPSHOT-runner.jar, an executable jar that can be run with java -jar
 
 $ oc login -u <username> -p <password>
 
@@ -60,6 +60,7 @@ $ oc project <teamname>-robot-app
 $ oc new-build registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:1.5 --binary --name=<teamname>-robot-app -l app=starter-app-java-quarkus
 $ oc start-build <teamname>-robot-app --from-file target/*-runner.jar --follow
 $ oc expose service <teamname>-robot-app
+
 Finally, make sure it's actually done rolling out:
 $ oc rollout status -w dc/<teamname>-robot-app  
 ----
