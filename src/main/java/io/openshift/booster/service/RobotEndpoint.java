@@ -30,12 +30,12 @@ public class RobotEndpoint {
     private RestTemplate restTemplate = new RestTemplate();
 
     // This method checks if the HubController can be reached
-    @GET
+    
     // This contains the uri of the Robot APi that this application is invoking. The
     // value is defined in application.properties.
     // Set it to your specific API
-    @Value("${hub.controller.uri}")
-    public Object ping() {
+    @GET
+    public String ping() {
 
         System.out.println("Ping method invoked");
         String response= "Ping method invoked";
