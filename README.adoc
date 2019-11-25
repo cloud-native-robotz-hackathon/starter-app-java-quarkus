@@ -59,6 +59,7 @@ $ oc project <teamname>-robot-app
 
 $ oc new-build registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:latest --binary --name=<teamname>-robot-app -l app=starter-app-java-quarkus
 $ oc start-build <teamname>-robot-app --from-file target/*-runner.jar --follow
+$ oc new-app <teamname>-robot-app
 $ oc expose service <teamname>-robot-app
 
 Finally, make sure it's actually done rolling out:
