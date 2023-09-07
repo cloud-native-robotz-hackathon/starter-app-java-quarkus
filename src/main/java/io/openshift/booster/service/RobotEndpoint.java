@@ -12,9 +12,9 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
 
 //This class provides a RESTful API with a /run method that can be triggered 
 //through the main app webpage. It is based on Quarkus run time. You don't need an Application to run it 
