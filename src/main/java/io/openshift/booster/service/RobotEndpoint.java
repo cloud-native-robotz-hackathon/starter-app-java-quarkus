@@ -103,10 +103,10 @@ public class RobotEndpoint {
          * EntityUtils.consume(entity);
          * } finally {
          * httpResponse.close();
-         * }
-         * 
-         * return response;
-         */
+         * }*/
+          
+          return response;
+         
     }
 
 }
