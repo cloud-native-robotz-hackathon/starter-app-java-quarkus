@@ -39,7 +39,7 @@
 <script>
   $(document).ready(function () {
     $("#invoke").click(function () {
-      $.post("/api/my_robot/run", function(data, status){
+      $.post("/my_robot/run", function(data, status){
         alert("Data: " + data + "\nStatus: " + status);
       });
       
