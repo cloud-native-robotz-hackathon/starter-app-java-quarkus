@@ -3,7 +3,7 @@ metadata:
   name: starter-app-java-quarkus
 components:
   - container:
-      cpuLimit: '4'
+      cpuLimit: '3'
       cpuRequest: '1'      
       image: registry.redhat.io/devspaces/udi-rhel8@sha256:de81824e6ccf82a286a28566432d4f43928a989c570578c4b4df9484ef136cca
       memoryLimit: 8G
