@@ -1,0 +1,50 @@
+quarkus:
+  application:
+    name: robot-controller
+  http:
+    port: 8080
+    host: 0.0.0.0
+  package:
+    type: jar
+  log:
+    level: INFO
+    console:
+      enable: true
+      format: "%d{yyyy-MM-dd HH:mm:ss,SSS} %-5p [%c{2.}] (%t) %s%e%n"
+
+# Robot Configuration
+robot:
+  name: ${ROBOT_NAME:demo-robot}
+  api:
+    url: ${ROBOT_API:http://api.hub-controller.svc.cluster.local/robot}
+
+# Inferencing Configuration  
+inferencing:
+  api:
+    url: ${INFERENCING_API:http://localhost:8000}
+    token: ${INFERENCING_API_TOKEN:demo-token}
+
+# Model Parameters
+model:
+  confidence-threshold: 0.3
+  class-labels:
+    - "Fedora"
+  
+# Robot Parameters
+parameters:
+  image-resolution-x: 640
+  delta-threshold: 280
+  min-distance-to-obstacle: 300
+  angle-delta: 90
+
+# REST Client Configuration
+quarkus:
+  rest-client:
+    robot-api:
+      url: ${robot.api.url}
+      trust-all: true
+      hostname-verification: NONE
+    inferencing-api:
+      url: ${inferencing.api.url}
+      trust-all: true
+      hostname-verification: NONE

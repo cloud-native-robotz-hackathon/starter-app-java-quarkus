@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="h-12 w-auto">
+  <!-- Red Hat Logo simplified representation -->
+  <g fill="#ee0000">
+    <!-- Hat shape -->
+    <path d="M20 40 Q30 30 50 35 Q70 30 80 40 Q85 45 80 50 L20 50 Q15 45 20 40 Z"/>
+    <!-- Shadow/base -->
+    <ellipse cx="50" cy="52" rx="32" ry="3" opacity="0.6"/>
+  </g>
+  <!-- Optional text if needed -->
+  <text x="50" y="70" text-anchor="middle" class="logo-text" font-size="12" font-family="Arial, sans-serif">Red Hat</text>
+</svg>
